@@ -1,0 +1,15 @@
+[user]
+	name = Hans Jiang
+	email = hansjiang82@gmail.com
+[core]
+	excludesfile = /Users/JiaHui/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/JiaHui/.stCommitMsg
+[alias]
+	dog = log --all --decorate --oneline --graph
