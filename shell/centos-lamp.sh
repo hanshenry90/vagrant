@@ -33,6 +33,12 @@ service mysqld start
 mysql -u root -e "SHOW DATABASES";
 # mysql -u root -e "CREATE DATABASE IF NOT EXIST lamp_html_service_test"
 
+# download starter content
+cd /vagrant
+sudo -u vagrant wget -q https://github.com/hanshenry90/vagrant/blob/master/files/index.html
+sudo -u vagrant wget -q https://github.com/hanshenry90/vagrant/blob/master/files/info.php
+
+# restart Apache server for taking effect for changes
 service httpd start
 
 
