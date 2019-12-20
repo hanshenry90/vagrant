@@ -35,8 +35,8 @@ mysql -u root -e "SHOW DATABASES";
 
 # download starter content
 cd /vagrant
- -u vagrant wget -q https://raw.githubusercontent.com/hanshenry90/vagrant/master/files/index.html
- -u vagrant wget -q https://raw.githubusercontent.com/hanshenry90/vagrant/master/files/info.php
+sudo -u vagrant wget -q https://raw.githubusercontent.com/hanshenry90/vagrant/master/files/index.html
+sudo -u vagrant wget -q https://raw.githubusercontent.com/hanshenry90/vagrant/master/files/info.php
 
 # restart Apache server for taking effect for changes
 service httpd start
