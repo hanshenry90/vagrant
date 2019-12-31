@@ -33,7 +33,7 @@ service mysqld start
 mysql -u root -e "SHOW DATABASES";
 # mysql -u root -e "CREATE DATABASE IF NOT EXIST lamp_html_service_test"
 
-# download starter content
+# download starter html content
 cd /vagrant
 sudo -u vagrant wget -q https://raw.githubusercontent.com/hanshenry90/vagrant/master/files/index.html
 sudo -u vagrant wget -q https://raw.githubusercontent.com/hanshenry90/vagrant/master/files/info.php
