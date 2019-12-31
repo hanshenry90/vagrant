@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 # Update Centos
 yum update -y --exclude=kernel

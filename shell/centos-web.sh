@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 # Install Apache server
 yum install -y httpd httpd-devel httpd-tools

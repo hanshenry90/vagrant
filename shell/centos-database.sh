@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 # Install MySQL
 yum install -y mysql mysql-server mysql-devel
