@@ -1,25 +1,38 @@
 #!/bin/bash
+# update CentOS with any patches
+yum update -y --exclude=kernel
 
-# Install Apache server
+# install nano git
+yum install -y nano git unzip screen
+
+# install Apache web service and start Apache server
 yum install -y httpd httpd-devel httpd-tools
 chkconfig --add httpd
-chkconfig httpd on
-# Stop apache server for configuration
+chkconfig httpd on 
+# stop Apache server for further config
 service httpd stop
 
-# Install PHP
-yum install -y php php-cli php-common php-devel php-mysql
-
-# Delete directory html and create symbolic link for custom html
+# delete html and create symbolic link for my own html
 rm -rf /var/www/html
 ln -s /vagrant /var/www/html
-# Start Apache server
+# start Apache server
 service httpd start
 
-# Download starter html content
+# install PHP
+yum install -y php php-cli php-common php-devel php-mysql
+
+# download starter html content
 cd /vagrant
 sudo -u vagrant wget -q https://raw.githubusercontent.com/hanshenry90/vagrant/master/files/index.html
 sudo -u vagrant wget -q https://raw.githubusercontent.com/hanshenry90/vagrant/master/files/info.php
 
-# Restart Apache server
-sevice httpd restart
+# restart Apache server for taking effect for changes
+service httpd start
+
+
+
+
+
+
+
+

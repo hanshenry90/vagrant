@@ -1,11 +1,13 @@
 #!/bin/bash
 
-# Install MySQL
+# install MySql database service
 yum install -y mysql mysql-server mysql-devel
-chkconfig --add mysqld 
+# load mysql on system start up
+chkconfig --add mysqld
 chkconfig mysqld on
-# Start MySQL server
+# start mysql server
 service mysqld start
 
-# Show mysql database
+#create mysql database table
 mysql -u root -e "SHOW DATABASES";
+# mysql -u root -e "CREATE DATABASE IF NOT EXIST lamp_html_service_test"
